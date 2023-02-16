@@ -158,3 +158,111 @@ td {
 .current-date {
   border: black;
 }
+
+
+/* --------------GENERAL ARTICLE STYLES------------------ */
+
+h2 {
+  font-family: 'La Belle Aurore';
+  font-size:3rem;
+  text-align:center;
+  margin-top:40px;
+  color:#6b9080;
+}
+
+.header-image img{
+  width:100%;
+}
+.article-header {
+  font-size:4rem;
+  font-family: 'La Belle Aurore', cursive;
+  color: #d46e6e;
+  width:100%;
+  text-align:center;
+  margin-top:200px;
+}
+
+#article-section {
+  width:80%;
+  margin:10px auto;
+}
+
+#javascript-articles {
+  display:inline-flex;
+  flex-direction:row;
+  justify-content:space-around;
+  width:100%;
+  flex-wrap:wrap;
+}
+
+#javascript-articles h3 {
+  font-family:sans-serif;
+  text-align:center;
+  margin-bottom:20px;
+  color:black;
+}
+
+#javascript-articles p {
+  text-align:left;
+  font-family:sans-serif;
+}
+.article {
+ display:flex;
+ flex-direction:column;
+ width:300px;
+ font-family:sans-serif;
+ margin:20px 10px;
+}
+.date-time {
+  color:#729a72;
+  margin-bottom:20px;
+}
+.description {
+  background-color:white;
+  padding:20px;
+  height:210px;
+  font-family:sans-serif;
+}
+
+.gray {
+  color:rgb(176, 176, 176);
+}
+
+.read-more {
+  color:white;
+  background-color:#729a72;
+  width:80px;
+  margin-top:10px;
+  padding:5px;
+  padding-left:30px;
+  padding-right:30px;
+  border-radius:10px;
+  text-align:center;
+  justify-self:center;
+}
+
+.read-more:hover {
+  color:#729a72;
+  background-color:white;
+}
+
+.no-style-link {
+  text-decoration: none;
+}
+
+.image-reserve {
+  width:300px;
+  background-color:#729a72;
+  color:white;
+  margin-left:auto;
+  margin-right:auto;
+  height:310px;
+}
+.image-reserve p {
+  font-size:3rem;
+}
+
+.image-reserve img {
+  height:310px;
+  width:300px;
+}
