@@ -1,1 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css" type="text/css">
+  <script src="./script.js" defer></script>
+  <title>Roisin's Notes</title>
+</head>
 
+<header>
+  <h1>Roisin's Notes</h1>
+  <nav>
+    <ul class="nav-links">
+      <a href=""><li>HMTL</li></a>
+      <a href=""><li>CSS</li></a>
+      <a href=""><li>JS</li></a>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero-image">
+  <img src="./img/lukas-blazek-GnvurwJsKaY-unsplash.jpg" alt="">
+</div>
+
+<!-- -----------------CALENDAR------------------------ -->
+<div class="calendar-div">
+
+  <table class="calendar" id="feb-23">
+    <tr>
+      <td class="month" colspan="8">
+        <h3>February</h3>
+      </td>
+    </tr>
+
+    <tr>
+      <td id="budget" colspan="8">
+        <p id="budget-amount">Budget: $<p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w prev-month">
+            <span class="weekday">Mon</span><span class="date">30</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w prev-month">
+            <span class="weekday">Tues</span><span class="date ">31</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Wed</span><span class="date">1</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Thurs</span><span class="date">2</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Fri</span><span class="date">3</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Sat</span><span class="date">4</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Sun</span><span class="date">5</span>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Mon</span><span class="date">6</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Tues</span><span class="date">7</span>
+          </div>
+        </div>  
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Wed</span><span class="date">8</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Thurs</span><span class="date">9</span>
+          </div>  
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Fri</span><span class="date">10</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Sat</span><span class="date">11</span>
+          </div>
+          <a href="" class="event gardening">Planted seeds</a>
+        </div>       
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Sun</span><span class="date">12</span>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Mon</span><span class="date">13</span>
+          </div>
+          <a href="https://handbook.eda.nz/foundations/curriculum/stretch" class="event revision">Revision Begins</a>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Tues</span><span class="date">14</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Wed</span><span class="date">15</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell" id="16/2">
+          <div class="d-o-w">
+            <span class="weekday" >Thurs</span><span class="date">16</span>
+          </div>
+          <div class="spending">
+            <p class="spending-amount">280</p>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Fri</span><span class="date">17</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Sat</span><span class="date">18</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Sun</span><span class="date">19</span>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Mon</span><span class="date">20</span>
+          </div>
+          <a href="" class="event bootcamp">Bootcamp Begins</a>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Tues</span><span class="date">21</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Wed</span><span class="date">22</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Thurs</span><span class="date">23</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Fri</span><span class="date">24</span>
+          </div> 
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Sat</span><span class="date">25</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Sun</span><span class="date">26</span>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="calendar-cell">
+          <div class="d-o-w">
+            <span class="weekday">Mon</span><span class="date">27</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell">
+          <div class ="d-o-w ">
+            <span class="weekday">Tues</span><span class="date">28</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell next-month">
+          <div class ="d-o-w">
+            <span class="weekday">Wed</span><span class="date">1</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell next-month">
+          <div class ="d-o-w">
+            <span class="weekday">Thurs</span><span class="date">2</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell next-month">
+          <div class ="d-o-w">
+            <span class="weekday">Fri</span><span class="date">3</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell next-month">
+          <div class ="d-o-w">
+            <span class="weekday">Sat</span><span class="date">4</span>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="calendar-cell next-month">
+          <div class ="d-o-w">
+            <span class="weekday">Sun</span><span class="date">5</span>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<body>
+  
+</body>
+
+
+</html>
