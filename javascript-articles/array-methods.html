@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css" type="text/css">
+  <script src="../script.js" defer></script>
+  <title>Roisin's Notes</title>
+</head>
+
+<body>
+<header>
+  <h1>Roisin's Notes</h1>
+  <nav>
+    <ul class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href=""><li>HMTL</li></a>
+      <a href=""><li>CSS</li></a>
+      <a href=""><li>JS</li></a>
+    </ul>
+  </nav>
+</header>
+
+<div class="article-body">
+  <h2>Array Methods</h2>
+
+  <div class="article-info">
+    <p>Let's begin with the array: <code>const fruits = ['banana', 'orange', 'apple']</code></p>
+
+    <h3>.pop()</h3>
+    <h4>Practical use cases:</h4>
+    <ul class="article-list">
+      <li>No longer need the last element of an array/ Remove the last element</li>
+      <li>Return the last element</li>
+      <li>Managing a stack of items (last in, first out)</li>
+      <li>Processing data in reverse order - getting the last elements one by one</li>
+      <li>Implementing undo/redo</li>
+    </ul>
+    <p>
+      Removes the last element from an array: <code> fruits.pop()</code> returns the array <code>'banana', 'orange'</code>
+    </p>
+    <p>
+      Can return the removed element by assigning it to a variable: <code>let fruit = fruits.pop()</code>, returns 'apple'
+    </p>
+    <h4>Pros & cons</h4>
+    <div class="diagrams">
+      <div class="pros-cons">
+        <p class="bold">Pros</p>
+        <ul>
+          <li>Simple efficient way to remove last element of array</li>
+          <li>Modifies the original array, no need to create new array. More memory efficient</li>
+          <li>Returns the element that was removed, can be useful if you need to store that value</li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <p class="bold">Cons</p>
+        <ul>
+          <li>Only removes the last element, would have to use <span class="bold">.shift()</span> or <span class="bold">.splice()</span>
+          to remove from the middle or beginning</li>
+          <li>Need to call multiple times for multiple elements</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- PUSH() -->
+    <h3>.push()</h3>
+    <p>One of the more commonly used</p>
+    <h4>Practical use cases:</h4>
+    <ul class="article-list">
+      <li>Adding elements to an array in chronological order</li>
+      <li>Building a queue of items (FIFO - first in, first out)</li>
+      <li>Creating a new array from scratch</li>
+      <li>Combining arrays *</li>
+    </ul>
+    <p>
+      Adds a new element to an array at the end: <code>fruits.push('passionfruit')</code> adds passionfruit to fruits[3]
+    </p>
+    <p>
+      Can return the length of the array with the new element: <code>let length = fruits.push('passionfruit')</code>, returns 4
+    </p>
+    <h4>* Difference between .push() and .concat()</h4>
+    <p>
+      When combining arrays, <span class="bold"> .concat()</span> returns a new array the contains the elements of the old arrays, while
+      <span class="bold"> .push()</span> modifies the original array by adding a different array to it.
+    </p>
+    <h4>Pros & cons</h4>
+    <div class="diagrams">
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">PROS</p>
+          <li>Modifies the original array in place, more memory efficient than <span class="bold"> .concat()</span></li>
+          <li>Flexible, allows you to add multiple elements</li>
+          <li>Simple way to add elements - which is a common operation</li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">CONS</p>
+          <li>Only allows you to add elements to end of array. <span class="bold">.unshift()</span>  or <span class="bold">.splice()</span>  can be used to place in other indexes</li>
+          <li>If working with large arrays, adding elements to end can be slow - have to iterate over entire array to find end</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- SPLIT() -->
+    <h3>.split()</h3>
+    <h4>Practical use cases:</h4>
+    <ul class="article-list">
+      <li> <a href="#parsing" class="bold">Parsing</a> data, useful for processing data in a CSV(comma separated values) file</li>
+      <li>Working with URLs - can split URL intp protocol, host and path</li>
+      <li>Removing characters, then use .join() to turn back into string</li>
+      <li>Tokenizing input: turning search queries into array of keywords</li>
+    </ul>
+    <p>
+      Splits a string into an array of substrings: For example the string <code> let fruitString = 'Hello there I like fruit'</code>, when called as 
+      <code>let fruitArray = fruitString.split(' ') </code> returns <code>['Hello','there','I','like','fruit']</code>
+    </p>
+    <p>
+      Can limit the return to a certain number of words with second parameter: <code>let fruitArray = fruitString.split(' ', 3) </code>:
+      returns <code>['Hello','there','I']</code>
+    </p>
+    <h4>Pros & cons</h4>
+    <div class="diagrams">
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Pros
+          </p>
+          <li>Simple and easy to use</li>
+          <li>Used to extract specific parts of a string</li>
+          <li>Can be used to remove specific characters or patters by splitting and rejoining</li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Cons
+          </p>
+          <li>Slow and memory-intensive for large strings as creates a new array in memory for each substring. Regular expressions may be
+            less memory intensive if you don't need to create a new array.
+          </li>
+          <li>Can be error prone if separator is not well-defined</li>
+          <li>Not the most efficient way of parsking tasks, like XML or JSON</li>
+        </ul>
+
+      </div>
+    </div>
+
+
+    <h3>.map()</h3>
+
+
+
+    <h3>.find()</h3>
+
+
+
+    <h3>.join()</h3>
+
+
+
+    <h3>.shift()</h3>
+    <p>
+      Removes the first element in an array and shifts the other elements down an index: <code>fruits.shift()</code>, 
+      removes 'banana', 'orange' becomes fruits[0]
+    </p>
+    <p>
+      Can return the element that was shifted: <code>let fruit = fruits.shift()</code>, returns 'banana'
+    </p>
+
+
+    <h3>.unshift()</h3>
+    <p>
+      Adds a new element to an array array at the 0 index, pushing other elements back an index: <code>fruits.unshift('passionfruit')        
+      </code>, adds 'passionfruit' as fruits[0], and 'banana' becomes fruits[1]
+    </p>
+    <p>
+      Returns the length of the array with the unshifted elements: <code>let length = fruits.unshift('passionfruit')</code>,
+      returns 4.
+    </p>
+
+
+    <h3>.concat()</h3>
+    <p>
+      Concatenates a new array (creates a new array by merging existing arrays). Say we have a second array: <code>let veggies = 
+        ['broccoli', 'lettuce', 'tomato']
+      </code> using .concat with can merge with fruits: <code>let 5ADay = fruits.concat(veggies)</code>, will return 5ADay as <code>
+        ['banana', 'orange', 'apple', 'broccoli', 'lettuce', 'tomato'].</code> 
+    </p>
+    <p>
+      The array the .concat() method is called on will come first, and the array in brackets will come after.
+    </p>
+
+
+    <h3>.splice()</h3>
+    <p>
+      Adds new items to an array. The first parameter defines the index where the element should be added, the second defines how many
+      elements to remove, the rest defines the elements to be added.
+    </p>
+    <p>
+      <code>fruits.splice(2, 0, 'passionfruit')</code>: adds 'passionfruit' to the 2 index (3rd place) and removes 0 elements.
+    </p>
+    <p>
+      <code>fruits.splice(0,2)</code>: Adds 0 elements, but the first two elements in an array are removed without leaving 'undefined'.
+    </p>
+
+
+    <h3>.slice()</h3>
+    <p>
+      Slices out a piece of an array into a new array: <code>let newArray = fruits.slice(1, 3)</code>: Returns a new array with
+      fruits from index 1 - 3
+    </p>
+    <p>
+      <code>let newArray = fruits.slice(2)</code>: with only one parameter the new array will slice out all elements from index 2 and above.
+    </p>
+
+
+    <h3>.toString()</h3>
+    <p>
+      Converts an array to a comma separated string.
+    </p>
+
+
+    <h3 id="parsing">Parsing</h3>
+    <p>Process of analyzing and interpreting text. Taking raw data and breaking it down into smaller pieces to perform individual tasks.
+      A program might parse a data file to extract individual pieces of info, then you can use that info to perform other tasks. You may 
+      parse to search for keywords or patterns.
+    </p>
+
+    <h3>Regular Expressions</h3>
+  </div>
+
+</div>
+
+
+</body>
+
+
+</html>
