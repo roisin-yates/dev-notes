@@ -304,9 +304,17 @@
 
     <!-- .JOIN() -->
     <h3>.join()</h3>
+    <p>
+      Returns an array as a string without affecting the original array.
+    </p>
+    <h4>Syntax</h4>
+    <p>
+      <code>array.join(separator)</code>
+    </p>
+    <hr>
 
 
-
+    <!-- .SHIFT() -->
     <h3>.shift()</h3>
     <p>
       Removes the first element in an array and shifts the other elements down an index: <code>fruits.shift()</code>, 
@@ -315,8 +323,9 @@
     <p>
       Can return the element that was shifted: <code>let fruit = fruits.shift()</code>, returns 'banana'
     </p>
+    <hr>
 
-
+    <!-- UNSHIFT() -->
     <h3>.unshift()</h3>
     <p>
       Adds a new element to an array array at the 0 index, pushing other elements back an index: <code>fruits.unshift('passionfruit')        
@@ -326,8 +335,9 @@
       Returns the length of the array with the unshifted elements: <code>let length = fruits.unshift('passionfruit')</code>,
       returns 4.
     </p>
+    <hr>
 
-
+    <!-- .CONCAT() -->
     <h3>.concat()</h3>
     <p>
       Concatenates a new array (creates a new array by merging existing arrays). Say we have a second array: <code>let veggies = 
@@ -338,8 +348,9 @@
     <p>
       The array the .concat() method is called on will come first, and the array in brackets will come after.
     </p>
+    <hr>
 
-
+    <!-- .SPLICE() -->
     <h3>.splice()</h3>
     <p>
       Adds new items to an array. The first parameter defines the index where the element should be added, the second defines how many
@@ -351,8 +362,9 @@
     <p>
       <code>fruits.splice(0,2)</code>: Adds 0 elements, but the first two elements in an array are removed without leaving 'undefined'.
     </p>
+    <hr>
 
-
+    <!-- .SLICE() -->
     <h3>.slice()</h3>
     <p>
       Slices out a piece of an array into a new array: <code>let newArray = fruits.slice(1, 3)</code>: Returns a new array with
@@ -361,11 +373,50 @@
     <p>
       <code>let newArray = fruits.slice(2)</code>: with only one parameter the new array will slice out all elements from index 2 and above.
     </p>
+    <hr>
 
-
+    <!-- .TOSTRING() -->
     <h3>.toString()</h3>
     <p>
-      Converts an array to a comma separated string.
+      Converts an array to a comma separated string without affecting the current array.
+    </p>
+    <hr>
+
+    <!-- .EVERY() -->
+    <h3>.every()</h3>
+    <p>Iterates through every array object and returns true if all elements return true, or false if one element returns false. It ignores
+      empty elements.
+    </p>
+    <h4>Syntax</h4>
+    <p>
+      Must take a callback function, which can take 3 parameters. Can also take an optional second parameter alongside the callback function
+    </p>
+    <p>
+      <code>array.every((currentValue, index, arr) => {
+        <br>}, thisValue)
+      </code>
+    </p>
+    <hr>
+
+    <!-- .FILTER() -->
+    <h3>.filter()</h3>
+    <p>
+      Creates a new array filled with elements that pass a test within a callback function. Ignores empty elements and does not change 
+      the original array. If no items pass, it returns an empty array.
+    </p>
+    <h4>Syntax</h4>
+    <p>
+      <code>array.filter((currentValue, index, arr) => {
+        <br>}, thisValue)
+      </code>
+    </p>
+    <hr>
+
+    <!-- .REVERSE() -->
+    <h3>.reverse()</h3>
+    <p>
+      Reverses the order of an array directly, not creating a new array but overwriting the original. Called within a function or 
+      globally without a variable.
     </p>
 
 
