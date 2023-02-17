@@ -204,6 +204,7 @@
     </div>
     <hr>
 
+    <!-- .REDUCE() -->
     <h3>.reduce()</h3>
     <h4>Practical use cases</h4>
     <ul class="article-list">
@@ -265,15 +266,43 @@
     </div>
     <hr>
 
-
+    <!-- .FIND() -->
     <h3>.find()</h3>
     <p>
       Finds the first item in an array that matches conditions. Takes a <a href="./glossary.html#callback" class="bold">callback function</a>  as its argument, which is called on each
       element until a match is found. The method returns that match and stops.
     </p>
+    <h4>Syntax</h4>
+    <p>
+      <code>let newArray = array.find((item) => {
+          <br> argument })
+      </code>
+    </p>
+    <h4>Pros & Cons</h4>
+    <div class="diagrams">
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Pros
+          </p>
+          <li>More efficient than searching through entire array as stops once the condition matches</li>
+          <li>Uses a callback to define the condition - flexibility and control</li>
+          <li>returns undefined in no elements match, good for <a href="./glossary.html#error-handling" class="bold"> error handling</a> </li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Cons
+          </p>
+          <li>Only returns the first matching element</li>
+          <li>Confusing for those not familiar with callback functions</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
 
-
-
+    <!-- .JOIN() -->
     <h3>.join()</h3>
 
 
