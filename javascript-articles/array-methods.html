@@ -144,14 +144,20 @@
           <li>Can be error prone if separator is not well-defined</li>
           <li>Not the most efficient way of parsking tasks, like XML or JSON</li>
         </ul>
-
       </div>
     </div>
 
 
     <h3>.map()</h3>
+    <h4>Practical use cases:</h4>
+    <ul class="article-list">
+      <li>Transforming an array: Modifying each element in the array.</li>
+      <li>Extracting data: returning a new array with desired conditions.</li>
+      <li>Converting data types: transforming every element.</li>
+      <li>Creating a new array with different values.</li>
+    </ul>
     <p>
-      Higher order function. Rearranges the array by iterating through each element and applying a given function to each element, 
+      <a href="./glossary.html#higher-order" class="bold">Higher order function.</a>  Rearranges the array by iterating through each element and applying a given function to each element, 
       returning a new array with the modified elements.
     </p>
     <h4>Syntax:</h4>
@@ -167,6 +173,31 @@
       <br> return num * 2
       <br> })</code>
     </p>
+    <h4>Pros & Cons</h4>
+    <div class="diagrams">
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Pros
+          </p>
+          <li>Simplified version of a loop for arrays</li>
+          <li>A  <a href="./glossary.html#pure-functions" class="bold">pure function</a> . Creates a new array without modifying the original</li>
+          <li>Supports chaining</li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Cons
+          </p>
+          <li>Creating a new array can be less efficient than modifying the original array</li>
+          <li>Not suited for all situations</li>
+          <li>Can be difficult to debug due to being higher order function</li>
+        </ul>
+
+      </div>
+
+    </div>
 
 
 
