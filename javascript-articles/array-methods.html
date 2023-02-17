@@ -26,7 +26,16 @@
   <h2>Array Methods</h2>
 
   <div class="article-info">
-    <p>Let's begin with the array: <code>const fruits = ['banana', 'orange', 'apple']</code></p>
+    <p>
+      Let's begin with the array: <code>const fruits = ['banana', 'orange', 'apple']</code>
+    </p>
+    <p>
+      These array methods can only be used on arrays and will return an error if the data type is not an array. This error will generally
+      look like:
+    </p>
+    <p>
+      <code>Uncaught TypeError: dataType.shift is not a function</code>
+    </p>
     <hr>
 
     <h3>.pop()</h3>
@@ -316,6 +325,12 @@
 
     <!-- .SHIFT() -->
     <h3>.shift()</h3>
+    <h4>Practical use cases</h4>
+    <ul class="article-list">
+      <li>Implementing a queue(FIFO)</li>
+      <li>Removing items from beginning of array</li>
+      <li>Processing items in a queue</li>
+    </ul>
     <p>
       Removes the first element in an array and shifts the other elements down an index: <code>fruits.shift()</code>, 
       removes 'banana', 'orange' becomes fruits[0]
@@ -323,10 +338,38 @@
     <p>
       Can return the element that was shifted: <code>let fruit = fruits.shift()</code>, returns 'banana'
     </p>
+    <h4>Pros & Cons</h4>
+    <div class="diagrams">
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Pros
+          </p>
+          <li>Quick and easy removal of first element</li>
+          <li>Doesn't leave a gap</li>
+          <li>Can return the removed element if you need to access it</li>
+          <li>Changes the original array directly</li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Cons
+          </p>
+          <li>Slow: It requires shifting all remaining elements by one position to fill the gap</li>
+          <li>Changes the original array</li>
+        </ul>
+
+      </div>
+    </div>
     <hr>
 
     <!-- UNSHIFT() -->
     <h3>.unshift()</h3>
+    <h4>Practical use cases</h4>
+    <ul class="article-list">
+      <li>Working with a stack(LIFO)</li>
+    </ul>
     <p>
       Adds a new element to an array array at the 0 index, pushing other elements back an index: <code>fruits.unshift('passionfruit')        
       </code>, adds 'passionfruit' as fruits[0], and 'banana' becomes fruits[1]
@@ -335,10 +378,38 @@
       Returns the length of the array with the unshifted elements: <code>let length = fruits.unshift('passionfruit')</code>,
       returns 4.
     </p>
+    <h4>Pros & Cons</h4>
+    <div class="diagrams">
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Pros
+          </p>
+          <li>Quick and easy addition to front of array</li>
+          <li>Moves other elements back automatically</li>
+          <li>Can return the length of the modified array</li>
+          <li>Changes the array directly</li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Cons
+          </p>
+          <li>Slow with large arrays: moves all elements back</li>
+          <li>Changes the original array</li>
+          <li>Only addes the element at 0 index, not all use cases</li>
+        </ul>
+      </div>
+    </div>
     <hr>
 
     <!-- .CONCAT() -->
     <h3>.concat()</h3>
+    <h4>Practical use cases</h4>
+    <ul class="article-list">
+      <li>Creating a new schedule or object but retaining the old ones</li>
+    </ul>
     <p>
       Concatenates a new array (creates a new array by merging existing arrays). Say we have a second array: <code>let veggies = 
         ['broccoli', 'lettuce', 'tomato']
@@ -352,6 +423,13 @@
 
     <!-- .SPLICE() -->
     <h3>.splice()</h3>
+    <h4>Practical use cases</h4>
+    <ul class="article-list">
+      <li>Adding elements at a specific index</li>
+      <li>Removing elements from a specific index</li>
+      <li>Replacing elements at that index</li>
+      <li>Splitting an array</li>
+    </ul>
     <p>
       Adds new items to an array. The first parameter defines the index where the element should be added, the second defines how many
       elements to remove, the rest defines the elements to be added.
@@ -362,6 +440,30 @@
     <p>
       <code>fruits.splice(0,2)</code>: Adds 0 elements, but the first two elements in an array are removed without leaving 'undefined'.
     </p>
+    <h4>Pros & Cons</h4>
+    <div class="diagrams">
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Pros
+          </p>
+          <li>Flexible. Can add and remove anywhere</li>
+          <li>Modifies array directly</li>
+          <li>Performs many operations in one method</li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Cons
+          </p>
+          <li>Modifies array directly - data loss</li>
+          <li>Relies on indexing, can only use if the index of element you are wanting to affect is known</li>
+          <li>Complex with larger arrays</li>
+        </ul>
+
+      </div>
+    </div>
     <hr>
 
     <!-- .SLICE() -->
