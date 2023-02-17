@@ -359,10 +359,15 @@ code {
 .pros-cons {
   background-color:#bfd8bd;
   padding:10px;
-  max-width:400px;
+  width:400px;
   margin:10px;
 }
 
 .pros-cons ul {
   margin:20px;
+}
+
+hr {
+  color:#829a82;
+  margin:50px;
 }

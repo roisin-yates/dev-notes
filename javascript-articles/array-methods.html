@@ -27,6 +27,7 @@
 
   <div class="article-info">
     <p>Let's begin with the array: <code>const fruits = ['banana', 'orange', 'apple']</code></p>
+    <hr>
 
     <h3>.pop()</h3>
     <h4>Practical use cases:</h4>
@@ -63,6 +64,7 @@
 
       </div>
     </div>
+    <hr>
 
     <!-- PUSH() -->
     <h3>.push()</h3>
@@ -103,6 +105,7 @@
         </ul>
       </div>
     </div>
+    <hr>
     
     <!-- SPLIT() -->
     <h3>.split()</h3>
@@ -146,8 +149,9 @@
         </ul>
       </div>
     </div>
+    <hr>
 
-
+    <!-- MAP -->
     <h3>.map()</h3>
     <h4>Practical use cases:</h4>
     <ul class="article-list">
@@ -182,7 +186,7 @@
           </p>
           <li>Simplified version of a loop for arrays</li>
           <li>A  <a href="./glossary.html#pure-functions" class="bold">pure function</a> . Creates a new array without modifying the original</li>
-          <li>Supports chaining</li>
+          <li>Supports <a href="./glossary.html#chaning" class="bold">chaining</a></li>
         </ul>
       </div>
       <div class="pros-cons">
@@ -198,10 +202,75 @@
       </div>
 
     </div>
+    <hr>
 
+    <h3>.reduce()</h3>
+    <h4>Practical use cases</h4>
+    <ul class="article-list">
+      <li>summing an array of numbers - useful for calculating total of shopping cart or score in game</li>
+      <li>Finding the maximum or minimum value</li>
+      <li>Counting the occurances of values in an array</li>
+      <li>Flattening nested arrays</li>
+    </ul>
+    <p>
+      Reduces an array down into a single value by applying a function to each element of the array, accumulating a result that is passed
+      from one iteration to the next. For example, you may have an array of objects, each with a price. The .reduce() method can return a 
+      single, total price.
+    </p>
+    <h4>Syntax</h4>
+    <p>
+      Takes 2 different parameters:
+    </p>
+    <ol class="article-list">
+      <li>A function: <code>array.reduce(<span class="bold">() => {
+        <br> }</span>,0)
+      </code></li>
+      <li>and the initial value: <code>array.reduce(() => {
+        <br>} <span class="bold">,0</span>)
+      </code></li>
+    </ol>
+    <p>
+      The arrow function then takes 2 different parameters: 
+    </p>
+    <ol class="article-list">
+      <li>The accumulator: What we're trying to reduce the array into</li>
+      <li>The items: each individual item that we're looping through</li>
+    </ol>
+    <p>
+      Deep dive properly <a href="https://www.youtube.com/watch?v=s1XVfm5mIuU" class="bold">here</a>
+    </p>
+    <h4>Pros & Cons</h4>
+    <div class="diagrams">
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Pros
+          </p>
+          <li>Flexible and versitile </li>
+          <li>Concise</li>
+          <li>Fast</li>
+          <li>Maintainable</li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            Cons
+          </p>
+          <li>Difficult for beginners</li>
+            <li>Complex and more difficult to read and debug in some cases</li>
+            <li>Slower than a for loop if using a small array</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
 
 
     <h3>.find()</h3>
+    <p>
+      Finds the first item in an array that matches conditions. Takes a <a href="./glossary.html#callback" class="bold">callback function</a>  as its argument, which is called on each
+      element until a match is found. The method returns that match and stops.
+    </p>
 
 
 
