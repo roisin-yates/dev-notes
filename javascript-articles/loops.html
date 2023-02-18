@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css" type="text/css">
+  <script src="../script.js" defer></script>
+  <title>Roisin's Notes</title>
+</head>
+
+<body>
+<header>
+  <h1>Roisin's Notes</h1>
+  <nav>
+    <ul class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href=""><li>HMTL</li></a>
+      <a href=""><li>CSS</li></a>
+      <a href="./javascript-articles-home.html"><li>JS</li></a>
+    </ul>
+  </nav>
+</header>
+
+<div class="article-body">
+  <h2>Loops Basics</h2>
+
+  <div class=article-info>
+
+    <!-- FOR LOOPS -->
+    <h3>For Loops</h3>
+    <p>
+      Used to iterate over a sequence of values like an array or string.
+    </p>
+    <h4>Syntax</h4>
+    <p>
+      <code>for (initialisation; condition; increment/decrement) {
+        <br> // code to be executed
+        <br> }
+      </code>
+    </p>
+    <p class="bold">
+      Clauses
+    </p>
+    <p>
+      Note: initialisation, condition and increment/decrement are typically referred to as clauses rather than parameters as they are 
+      components of the syntax that define the behaviour of the loop rather than arguments passed into the for loop.
+    </p>
+    <ol class="article-list">
+      <li><span class="bold">Initialisation:</span> executed only once at the beginning of the loop - the initial value of a counter variable</li>
+      <li><span class="bold">Condition:</span> Evaluated before each iteration, and determines whether the loop should continue. </li>
+      <li><span class="bold">Increment/decrement:</span> Executed at the end of each iteration, modifies the counter variable</li>
+    </ol>
+    <p>
+      So 
+      <br><code>for (let i = 0; i < array.length; i++) {
+        <br> // code to be executed
+        <br> }</code>
+      <br> explains that i is initially 0, and as long as i is less than the array length, it will execute the code for that value and then
+      increase the value of i by 1 and continue the loop until i is no longer less than the array length.
+    </p>
+    <hr>
+
+    <!-- FOR...OF LOOPS -->
+    <h3>For....of Loops</h3>
+    <p>
+      Used to iterate over values of the iterable object rather than keys or indices
+    </p>
+    <h4>Syntax</h4>
+    <p>
+      <code>for (const variable of iterable) {
+        <br>//code to be executed
+        <br>}
+      </code>
+    </p>
+    <p class="bold">
+      Clauses
+    </p>
+    <ol class="article-list">
+      <li><span class="bold">Variable:</span> Represents a variable that is assigned to each value in the iterable object. 
+      <br>Note: you need to declare the variable within the brackets</li>
+      <li><span class="bold">Iterable:</span> Represents the iterable object</li>
+    </ol>
+    <hr>
+
+    <!-- FOR....IN LOOPS -->
+    <h3>For....in Loops</h3>
+    <p>
+      Used specifically to iterate over the properties of an object by assigning each property name to a variable, one at a time, then
+      executing the code for each property.
+    </p>
+    <h4>Syntax</h4>
+    <p>
+      <code>for (const property in object) {
+        <br>// code to be executed
+        <br>}
+      </code>
+    </p>
+    <hr>
+
+    <!-- WHILE LOOPS -->
+    <h3>While Loops</h3>
+    <p>
+      A <a href="./glossary.html#control-flow" class="bold">control flow statement</a> that allows you to execute a block of code as long as a specified condition is true. The 
+      condition is checked at the beginning of the loop.
+    </p>
+    <h4>Syntax</h4>
+    <p>
+      <code>while (condition) {
+        <br>//code to be Executed
+        <br> }
+      </code>
+    </p>
+    <p>
+      Note: It is important to remember that if the condition is never false, the loop will continue to run indefinitely and can crash
+      the program.
+    </p>
+    <h4>Difference to 'if' statements</h4>
+    <p>
+      While 'if' statements and 'while' loops are both control flow statements, if statements execute a block of code conditionally, only
+      if the condition is true. While loops execute a block of code repeatedly until the condition is false. 
+    </p>
+    <p class="bold">
+      Common use cases for each
+    </p>
+    <div class="diagrams">
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            'if' statements
+          </p>
+          <li>Validation of user input: Check if the input is valid, only runs once for the input</li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            'while' loops
+          </p>
+          <li>Processing data in batches: When working with large amounts of data, will loop through batches of certain amounts</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+
+    <!-- DO...WHILE LOOPS -->
+    <h3>do...while Loops</h3>
+    <p>
+      Essentially the same as the 'while' loop, with one key difference: The condition is checked at the end of the loop. E.g 'while' loops
+      could be paraphrased like: if the statement is true, run the code and repeat, whereas 'do...while' loops can be paraphrased as: run the code,
+      if the statement is true, run it again. Do...while loops run at least once. 
+    </p>
+    <h4>Syntax</h4>
+    <p>
+      <code>do {
+        <br> //code to be executed;
+        <br>} while (condition)
+      </code>
+    </p>
+    
+  </div>
+
+</div>
+
+
+</body>
+
+
+</html>
