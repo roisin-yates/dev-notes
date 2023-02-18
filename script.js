@@ -2,7 +2,7 @@ let currentDate = new Date()
 let reducedDate = `${currentDate.getDate()}/${currentDate.getMonth() + 1}`
 
 let budget = 6000
-let spending = document.getElementsByClassName('spending-amount')
+let spending = document.getElementsByClassName('spending-amount').split(' ')
 
 const highlightDate = () => {
   let el = document.getElementById(`${reducedDate}`)
@@ -10,14 +10,14 @@ const highlightDate = () => {
 }
 highlightDate()
 
-// const displayBudget = () => {
-//   let el = document.getElementById('budget-amount')
-//   el.innerText = `Budget: $${budget}`
-// }
-// displayBudget()
+const displayBudget = () => {
+  let el = document.getElementById('budget-amount')
+  el.innerText = `Budget: $${budget}`
+}
+displayBudget()
 
-// const updateBudget = () => {
-//   let el = spending
-//   console.log(el)
-// }
-// updateBudget()
+const updateBudget = () => {
+  let el = spending
+  console.log(el)
+}
+updateBudget()
