@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css" type="text/css">
+  <script src="../script.js" defer></script>
+  <title>Roisin's Notes</title>
+</head>
+
+<body>
+<header>
+  <h1>Roisin's Notes</h1>
+  <nav>
+    <ul class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href=""><li>HMTL</li></a>
+      <a href=""><li>CSS</li></a>
+      <a href="./javascript-articles-home.html"><li>JS</li></a>
+    </ul>
+  </nav>
+</header>
+
+<div class="article-body">
+  <h2>The .forEach() method</h2>
+
+  <div class="article-info">
+    <h3>Syntax</h3>
+    <p>
+      The forEach() method is a built-in method that works like a loop. It takes a callback function as an argument and iterates over an 
+      an array, applying that callback function to each element.
+    </p>
+    <p>
+      You can use an arrow function that takes a parameter like so:
+    </p>
+    <p>
+      <code>array.forEach((item) => {
+        <br>console.log(item) 
+        <br>})
+      </code>
+      This code will console log out each element in the array.
+    </p>
+    <hr>
+
+    <h3>The difference between .map() and .forEach()</h3>
+    <p>Both iterate overy arrays, but there is one main difference</p>
+    <div class="diagrams">
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            .forEach()
+          </p>
+          <li>Modifies the array directly</li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            .map()
+          </p>
+          <li>Creates a new array</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+
+    <h3>The diffeence between .forEach() and a for loop</h3>
+    <div class="diagrams">
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            .forEach()
+          </p>
+          <li>Iterates by applying a callback function to every element</li>
+          <li>Generally provides cleaner snytax</li>
+        </ul>
+      </div>
+      <div class="pros-cons">
+        <ul>
+          <p class="bold">
+            for loop
+          </p>
+          <li>Iterates using an index variable to access elements</li>
+          <li>Provides more flexibility and control</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+
+
+  </div>
+
+</div>
+
+
+</body>
+
+
+</html>
